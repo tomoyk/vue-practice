@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<div id="app">
+  {{ info }}
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data () {
+    return {
+      info: null
+    }
+  },
+  mounted () {
+    axios
+      .get('http://127.0.0.1:8000/departments/', {}, new URLSearchParams())
+      .then(response => (this.info = response))
+  }
+})
+</script>

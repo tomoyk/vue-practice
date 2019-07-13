@@ -1,0 +1,17 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app-3">
+  <input type="button" v-on:click="seen = !seen" value="push">
+  <span v-if="seen">Now you see me</span>
+  <input type="text" v-if="seen" v-bind:value="mess">
+</div>
+
+<script>
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: true,
+    mess: "hello world",
+  }
+})
+</script>

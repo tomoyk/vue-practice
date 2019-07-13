@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+
+<script>
+let page = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello World'
+  }
+})
+</script>
+
+<!--
+    a = ['Done', 'is', 'better', 'than', 'perfect']
+    for(let i = 0; i < a.length; i++ ){
+        page.message += a[i]
+    }
+-->
